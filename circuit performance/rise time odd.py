@@ -77,15 +77,15 @@ plt.plot(ten_pt[0], ten_pt[1] , "o")
 plt.plot(data["t"], ten_pt[1] * x, "-.", label=r"$10 \%$")
 plt.plot(ninety_pt[0], ninety_pt[1], "o")
 plt.plot(data["t"], ninety_pt[1] * x, "-.", label=r"$90 \%$")
-plt.plot(st_pt[0], st_pt[1], "o", label=r"$settle \, point(err \, in \," + str(100 * settle_err) + r"\% )$")
+plt.plot(st_pt[0], st_pt[1], "o", label=r"$settling \, point(err \, in \," + str(100 * settle_err) + r"\% )$")
 
 
 rise_time = ninety_pt[0] - ten_pt[0]
 st_time = st_pt[0] - start_time
 
 print "rise time =" , rise_time
-print "{0}% settle time =".format(settle_err*100), st_time
-title = "$rise \, time = {0}s, \; settle \, time = {1}s$".format(rise_time, st_time)
+print "{0}% settling time =".format(settle_err*100), st_time
+title = "$rise \, time = {0}s, \; settling \, time = {1}s$".format(rise_time, st_time)
 plt.title(r"" + title)
 plt.legend()
 plt.show()
